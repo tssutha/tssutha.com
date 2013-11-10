@@ -1,0 +1,21 @@
+$def with (postlist)
+$var title = "tssutha"
+
+<div class="container large-centered large-7 small-12 columns">
+    <div class="row">
+        <div class="content">
+            $for post in postlist
+            	<hr/>
+            	<div class="post row">
+       		 		<div class="small-12 columns">
+            		<a href="$post.filename"><h4 class="post-title">$post.title</h4></a>
+            		<p class="post-date muted text-right">$post.date </p>
+            		</div>
+    			</div>
+    			<hr/>
+        </div>
+    </div>
+</div>
+	
+	
+	
