@@ -29,29 +29,52 @@ render = web.template.render('templates/',base='layout1')
 md = markdown.Markdown(output_format='html5')
 
 class post(object):
+	"""
+		post class is to store each post information
+		
+	"""
 	def __init__(self):
 		self.date = "21-12-1983"
 		self.title = "This is post's title"
-		self.summery = "Summery"
+		self.summary = "Summary"
 		self.filename = ""
-	
+# and not file.startswith("2013-08-10")	
 class post_adap(object):
+	"""
+		This post_adp class ,read all markdown files from static/page
+		folder and get post information from file name, such as 
+		date, title, summary and store into list of post object
+		Index page use this list of post information to render the 
+		from page. 
+		sample file name : yyyy-mm-dd-this-is-post-title.markdown
+		where
+			post.date = yyyy-mm-dd
+			post.title = this is post title
+	"""
 	def __init__(self):
 		self.postList = []
 		
 	def getposts(self):
+		"""
+			Get List of post information , sorted by date object
+		"""
 		for r,d, f in os.walk('static/pages/'):
 			for file in f:
-				if not file.startswith('.'):
+				if not file.startswith('.') and not file.startswith("2013-08-10"):
 					pst = post()
 					fname,title, dt = self.getpostprops(file)
 					pst.date = dt
 					pst.title = title
 					pst.filename = 'blog/'+ fname
 					self.postList.append(pst)
+		self.postList = self.sort_post_by_date(self.postList)
 		return self.postList
 	
 	def getpostprops(self,filename):
+		"""
+			Process the post file name (markdown) and extract the 
+			post properties such as date, title, summary
+		"""
 		ls = filename.split('.')
 		filename = ls[0]
 		ls = filename.split('-')
@@ -59,13 +82,27 @@ class post_adap(object):
 		dt = datetime.date(int(ls[0]), int(ls[1]), int(ls[2]))
 		title = ' '.join(ls[3:])
 		return ( filename, title,dt.__str__())
-		
-		
 	
+	def sort_post_by_date(self,postls):
+		"""
+		 Sort a list of post object based on their written 
+		 date
+		"""
+		for i in range(len(postls)):
+			for j in range(i + 1,len(postls)):
+				if postls[i].date < postls[j].date:
+					tmpst = post()
+					tmpst = postls[i]
+					postls[i] = postls[j]
+					postls[j] = tmpst
+		return postls
 		
-
 
 class index(object):
+	"""
+		Index Page, get the list post object and 
+		render it in front page
+	"""
 	def GET(self):
 		postAdap = post_adap()
 		return render.index(postAdap.getposts())
@@ -86,6 +123,9 @@ class archive(object):
 		return render.archive()
 		
 class about(object):
+	"""
+		Render the About Me Page
+	"""
 	def GET(object):
 		return render.about()
 		
@@ -111,29 +151,7 @@ class page:
 		
 		#Render the page.html template using the converted content
 		return render.page(content)
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-web.config.debug = True
+	
+web.config.debug = False
 if __name__ == "__main__":
 	app.run()
