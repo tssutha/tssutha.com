@@ -26,7 +26,7 @@ Here are some facts about Bangkok City
 	
 Here are some clicks of City of Angels, Credits to [Thakshayani Sellevel](https://www.facebook.com/thakshayani)
 ![Bangkok City At Night][img1]
-			Bangkok City at Night from High Attitude
+			Bangkok City at Night from High Altitude
 
 
 ![Bangkok Bridge][img2]
@@ -66,7 +66,7 @@ Here are some clicks of City of Angels, Credits to [Thakshayani Sellevel](https:
 			very cheap
 
 
-[img1]:/static/res/1.jpg "Bangkok City at Night from High Attitude"
+[img1]:/static/res/1.jpg "Bangkok City at Night from High Altitude"
 [img2]:/static/res/2.jpg "Beautiful Bangkok Bridge from River cruise"
 [img3]:/static/res/3.jpg "Grand Palace from Chao Phraya River"
 [img4]:/static/res/4.jpg "Grand palace enterance, Temple with Gold courting"
