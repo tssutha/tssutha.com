@@ -26,7 +26,7 @@ urls = (
 
 app = web.application(urls, globals())
 render = web.template.render('templates/',base='layout1')
-md = markdown.Markdown(output_format='html5')
+md = markdown.Markdown(output_format='html5', extensions=['codehilite(linenums=True)'])
 
 class post(object):
 	"""

@@ -1,4 +1,4 @@
-----
+
 ### Bit Packing in C/C++ using Bitwise operations
 ----
 
