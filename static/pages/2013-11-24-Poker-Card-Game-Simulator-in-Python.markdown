@@ -7,7 +7,7 @@ Image from [Don't play the cards, Play the people][link6]</br>
 This is part of python learning experience with [matplotlib][link2], [numpy][link3]
 and [scipy][link4]. 
 
-After losing lots of money on poker game, yeah I said in iPhone games, it was an 
+After losing lots of money on poker game, what? yeah I said in iPhone games, it was an 
 attempt to analyse the probability of winning the money back. 
 
 >In poker, players construct hands of five cards according to predetermined rules,
@@ -35,13 +35,13 @@ I use the following abbreviation for each poker hand rank to display the data.
 
 Initially I started to to code the poker hand simulator based on some text book, when I
 saw the output which is almost close the theoretical value, I got the idea to plot the
-values using some python plotting libraries as a learning  experience. Wow the data
+values using some python plotting libraries as a learning  experience. Wow, the data
 analysis with python is awesome with powerful libraries like [matplotlib][link2], [numpy][link3]
 and [scipy][link4]. You can refer the source code [here.][link5] 
 
 The following results are based on following conditions,
 <ul>
-	<li>For each shuffling, distribute 7 cards for 7 hands.</li>
+	<li>For each shuffling, distribute 7 cards per hand for 7 hands.</li>
 	<li>Check each hand's rank at first time before moving any cards.</li>
 	<li>Repeat the shuffling for 10000 times and accumulated result was taken.</li>
 	<li>Use the python's random.shuffle() api for shuffling the cards.</li>
