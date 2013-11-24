@@ -1,5 +1,5 @@
 
-### Poker Card Game Hand Simulator in Python
+### Poker Card Game Hand Simulator using Python
 ---
 ![poker][img7] 
 Image from [Don't play the cards, Play the people][link6]</br>
