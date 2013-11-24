@@ -1,6 +1,8 @@
 
 ### Poker Card Game Hand Simulator in Python
 ---
+![poker][img7] 
+Image from [Don't play the cards, Play the people][link6]</br>
 
 This is part of python learning experience with [matplotlib][link2], [numpy][link3]
 and [scipy][link4]. 
@@ -34,7 +36,8 @@ I use the following abbreviation for each poker hand rank to display the data.
 Initially I started to to code the poker hand simulator based on some text book, when I
 saw the output which is almost close the theoretical value, I got the idea to plot the
 values using some python plotting libraries as a learning  experience. Wow the data
-analysis with python is awesome with powerful libraries like numpy, scipy and matplotlib. 
+analysis with python is awesome with powerful libraries like [matplotlib][link2], [numpy][link3]
+and [scipy][link4]. You can refer the source code [here.][link5] 
 
 The following results are based on following conditions,
 <ul>
@@ -61,14 +64,25 @@ test for 10 times, the result was almost identical.
 Code to plot Pie Chart using MatplotLib 
 ![Pie Chart using Matplotlib][img5]
 
+In order to verify the simulator result with existing theoretical value, I repeated the 
+test with 5 cards per hand. After 10000 times of shuffling, following result shows the 
+comparison. Refer this link for theoretical values [Hand's Ranking][link1].
+![test][img6]
+
+
 
 [link1]: http://en.wikipedia.org/wiki/Hand_rankings
 [link2]: http://matplotlib.org
 [link3]: http://www.numpy.org
 [link4]: http://www.scipy.org/
+[link5]: https://github.com/tssutha/PokerSimulator
+[link6]: http://www.parade.com/172290/ellenleikind/life-lessons-from-poker-dont-play-the-cards-play-the-people/
 [img1]: /static/res/pokerbar.png "Bar Chart : Probability of each rank after 10000 shuffles"
 [img2]: /static/res/pokerpie.png "Pie Chart : Probability of each rank after 10000 shuffles"
 [img3]: /static/res/pokerline.png "Number of occurrences of each rank in 10000 shuffles, repeated 10 times"
 [img4]: /static/res/codesnipet.png
 [img5]: /static/res/codesnippet2.png
+[img6]: /static/res/compare.png
+[img7]: /static/res/poker.jpg
+
 
