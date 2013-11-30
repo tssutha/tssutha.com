@@ -1,3 +1,10 @@
+#
+# This is main server side code in python and webpy
+# 
+#
+#
+
+
 import web
 from web import form
 import markdown
@@ -21,6 +28,7 @@ urls = (
 	'/archive', 'archive',
 	'/about', 'about',
 	'/blog/(.*)', 'page',
+	'/projects', 'projects',
 	
 )
 
@@ -106,6 +114,25 @@ class index(object):
 	def GET(self):
 		postAdap = post_adap()
 		return render.index(postAdap.getposts())
+		
+class projects(object):
+	def GET(self):
+		#each URL maps to corresponding .txt file in pages
+		page_file = 'static/projects.markdown'
+		
+		#Try to open the text file, returning a 404 upon failure
+		try:
+			f = open(page_file, 'r')
+		except:
+			return web.notfound()
+		#read the entire file, converting Markdown content to HTML
+		content = f. read()
+		content = md.convert(content)
+		
+		#Render the page.html template using the converted content
+		return render.projects( content)
+		
+		
 
 class login(object):
 	def GET(self):
@@ -118,6 +145,8 @@ class register(object):
 class submit(object):
 	def GET(self):
 		return render.submit()
+		
+
 class archive(object):
 	def GET(self):
 		return render.archive()
@@ -131,26 +160,45 @@ class about(object):
 		
 class page:
 	def GET(self, url):
+		"""
+			Get the URL form page request and generate the file
+			name based on folder structure.
+			Use MarkDown object to convert the *.markdown file to
+			html5 content using python MarkDown Package
+			
+		"""
+		title = self.get_page_title(url)
+		
 		#handle index pages : path/ Maps to path/index.txt
 		if url == "" or url.endswith("/"):
 			url += "index"
 		
 		#each URL maps to corresponding .txt file in pages
 		page_file = 'static/pages/%s.markdown'%(url)
-		print page_file
 		
 		#Try to open the text file, returning a 404 upon failure
 		try:
 			f = open(page_file, 'r')
 		except:
 			return web.notfound()
-		print "2nd "
 		#read the entire file, converting Markdown content to HTML
 		content = f. read()
 		content = md.convert(content)
 		
 		#Render the page.html template using the converted content
-		return render.page(content)
+		return render.page(title, content)
+	
+	def get_page_title(self, url):
+		"""
+			Get the page title using URL of the page
+		"""
+		title = url[11:] + " | tssutha.com"
+		title = title.replace("-", " ")
+		return title
+		
+		
+	
+		
 	
 web.config.debug = False
 if __name__ == "__main__":
