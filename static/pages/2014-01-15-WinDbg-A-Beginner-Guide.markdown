@@ -1,4 +1,4 @@
-### WinDbg : Beginner Guide 
+### WinDbg : A Windows Debugging Tool, Beginner Guide 
 
 [Windbg][link1] is an awesome, multipurpose debugger for [Microsoft Windows][link2],
  distributed on the web by Microsoft. It is very useful tool to debug user applications,
