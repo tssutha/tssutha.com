@@ -1,5 +1,10 @@
 ### WinDbg : A Windows Debugging Tool, Beginner Guide 
 
+![debugging][img1]
+Debugging a bug is always challenging and interesting, but the above comic is way to much
+to reproduce the bug. I know, your are laughing, all credits goes to awesome [XKCD][link5].
+OK, get back to serious business. 
+
 [Windbg][link1] is an awesome, multipurpose debugger for [Microsoft Windows][link2],
  distributed on the web by Microsoft. It is very useful tool to debug user applications,
  drivers and third party software modules. It is always handy whenever there is a need to
@@ -99,4 +104,6 @@ your feedback if it was useful.
 [link2]: http://windows.microsoft.com/en-us/windows/home
 [link3]: http://msdn.microsoft.com/en-sg/windows/hardware/hh852365.aspx
 [link4]: http://msdn.microsoft.com/en-us/library/windows/hardware/ff558847%28v=vs.85%29.aspx
+[img1]: /static/res/debugging.png "http://xkcd.com/583/"
+[link5]: http://xkcd.com/583/
 
