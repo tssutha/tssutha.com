@@ -1,6 +1,6 @@
 ### WinDbg : Beginner Guide 
 
-[Windbg][link1]is a awesome, multipurpose debugger for [Microsoft Windows][link2],
+[Windbg][link1] is an awesome, multipurpose debugger for [Microsoft Windows][link2],
  distributed on the web by Microsoft. It is very useful tool to debug user applications,
  drivers and third party software modules. It is always handy whenever there is a need to
  analyse field issues reported by customer. In ordinary cases, we just request the customer
