@@ -1,7 +1,7 @@
 ### WinDbg : A Windows Debugging Tool, Beginner Guide 
 
 ![debugging][img1]
-Debugging a bug is always challenging and interesting, but the above comic is way to much
+Debugging a bug is always challenging and interesting, but the above comic is way too much
 to reproduce the bug. I know, your are laughing, all credits goes to awesome [XKCD][link5].
 OK, get back to serious business. 
 
