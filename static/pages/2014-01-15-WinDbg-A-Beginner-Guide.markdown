@@ -23,7 +23,7 @@ Step 3: Get the Symbol (Private and Public) file for target application
 >Start using the WinDbg Tool.
 
 >1. Open the WinDbg 
->2. Open the Crush Dump file generated during the software crash.
+>2. Open the Crash Dump file generated during the software crash.
 >3. Add Symbol Paths
 	*	***.Sympath+ D:\\MS\\Symbols***  		-- Symbol file path for Microsoft windows and DotNet
 	*	***.Sympath+ D:\\MyApp\\Symbols\\***     -- Symbol file path for target application
