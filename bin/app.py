@@ -11,6 +11,10 @@ import markdown
 from os.path import  join
 import os
 import datetime
+import sys
+
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 #urls = (
 #	'/', 'index',
